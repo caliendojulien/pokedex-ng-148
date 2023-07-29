@@ -1,0 +1,9 @@
+<div class="boutons">
+  <button>Précédent</button>
+  <button>Suivant</button>
+</div>
+<div *ngIf="pokemons$ | async as pokemons" class="cartes">
+  <div *ngFor="let pokemon of pokemons.results" class="carte">
+    <app-pokemon [url]="pokemon.url"></app-pokemon>
+  </div>
+</div>
